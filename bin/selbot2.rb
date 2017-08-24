@@ -186,7 +186,7 @@ Cinch::Bot.new {
     },
     {
       :expression => /:ide/i,
-      :text       => "Selenium IDE is no longer being maintained. You can ask a question, but most people here will be unable to help you. Instead, consider using WebDriver - http://www.seleniumhq.org/projects/webdriver/",
+      :text       => "Selenium IDE is no longer being maintained. Firefox 55 onwards, Selenium IDE will no longer work. Perhaps, you can downgrade your FF version and use the add-on: https://goo.gl/A8VPjM or instead, consider using WebDriver - http://www.seleniumhq.org/projects/webdriver/ ",
       :help       => "Let users know IDE is no longer maintained"
     },
     {
@@ -218,6 +218,11 @@ Cinch::Bot.new {
       :expression => /:tias/,
       :text => "Try it and see - you'll be able to find out much faster if your proposal works by trying it than by asking us if it will work.",
       :help => "Try it and see"
+    },
+    {
+        :expression => /:ide/,
+        :text => "Try it and see - you'll be able to find out much faster if your proposal works by trying it than by asking us if it will work.",
+        :help => "Try it and see"
     }
   ].each do |cmd|
     Selbot2::HELPS << [cmd[:expression].source, cmd[:help]]
